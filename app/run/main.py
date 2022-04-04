@@ -43,7 +43,11 @@ if st.session_state.get("run"):
         # Setting for pke to use japanese
         pke.lang.stopwords["ja_ginza"] = "ja"
         stopwords = list(spacy.lang.ja.STOP_WORDS)
-        nltk.corpus.stopwords.words_org = nltk.corpus.stopwords.words
+        try:
+            nltk.corpus.stopwords.words_org = nltk.corpus.stopwords.words
+        except:
+            nltk.download("stopwords")
+            nltk.corpus.stopwords.words_org = nltk.corpus.stopwords.words
         nltk.corpus.stopwords.words = (
             lambda lang: stopwords
             if lang == "ja"
