@@ -32,3 +32,6 @@ Installed dictionaries (`$MECABDIC=/var/lib/mecab/dic`) are shared by `app` and 
 ```shell
 > docker-compose down
 ```
+
+### System diagram
+![System diagram](assets/sytem-diagram.png)
