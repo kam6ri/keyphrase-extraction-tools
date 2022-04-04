@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Install mecab-ipadic-neologd
+git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git /tmp/mecab-ipadic-neologd
+cd /tmp/mecab-ipadic-neologd
+./bin/install-mecab-ipadic-neologd -n -y -p $MECABDIC/ipadic-neologd

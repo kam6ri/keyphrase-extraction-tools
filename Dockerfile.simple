@@ -1,0 +1,19 @@
+###########################
+# app 
+###########################
+FROM gueshima1/ket-app:0.1.0 AS app
+
+ENV HOME=/app \
+    PATH=$HOME/bin:$PATH
+
+WORKDIR $HOME/run
+
+###########################
+# jupyter
+###########################
+FROM gueshima1/ket-jupyter:0.1.0 AS jupyter
+
+ENV HOME=/jupyter \
+    PATH=$HOME/bin:$PATH
+
+WORKDIR $HOME/notebooks
